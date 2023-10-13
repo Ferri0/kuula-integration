@@ -1,0 +1,125 @@
+.space360_container {
+    transition: 0.3s all;
+    opacity: 0;
+}
+
+.space360_container.space360_isTourVisible {
+    opacity: 1;
+}
+
+.space360_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000000000;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .85);
+}
+
+.space360_innerWrapper {
+    vertical-align: middle;
+    max-width: 80%;
+    max-height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+.space360_iframeWrapper {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    background: url("https://cdn.jsdelivr.net/gh/Ferri0/kuula-integration@main/src/0.0.3/giphy.gif");
+    background-repeat: no-repeat;
+    background-size: 60px;
+    background-position: center center;
+}
+
+@media screen and (min-width: 1400px) {
+    .space360_iframeWrapper {
+        padding-bottom: 50%;
+    }
+}
+
+.space360_iframeWrapper iframe {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    border: none;
+    opacity: 0;
+    animation: appear 0.5s 1.5s forwards;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.space360_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.6;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    transition: 0.4s all;
+}
+
+.space360_header a {
+    display: block;
+    height: 100%;
+}
+
+.space360_header:hover {
+    opacity: 1;
+}
+
+.space360_logo {
+    background-image: url("https://cdn.jsdelivr.net/gh/Ferri0/kuula-integration@main/src/0.0.3/logo.avif");
+    background-repeat: no-repeat;
+    background-size: 200px 40px;
+    background-position: center center;
+    width: 200px;
+    height: 100%;
+    transition: 0.3s all;
+}
+
+.space360_logo:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.space360_closeBtn {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 25px;
+    height: 25px;
+    background-image: url("https://cdn.jsdelivr.net/gh/Ferri0/kuula-integration@main/src/0.0.3/close.svg");
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    background-position: center center;
+    transition: 0.3s all;
+}
+
+.space360_closeBtn:hover {
+    transform: translate(0, -50%) scale(1.1);
+    cursor: pointer;
+}
+
