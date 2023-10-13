@@ -4,7 +4,7 @@ window.space360 = {
 
 const linkEl = document.createElement('link');
 linkEl.rel = "stylesheet";
-linkEl.href = "https://cdn.jsdelivr.net/gh/Ferri0/kuula-integration@main/src/0.0.1/index.css";
+linkEl.href = "https://cdn.jsdelivr.net/gh/Ferri0/kuula-integration@main/src/0.0.2/index.css";
 
 document.head.appendChild(linkEl);
 
